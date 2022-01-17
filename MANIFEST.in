@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include requestaccessmanager *.css
+recursive-include requestaccessmanager *.csv
+recursive-include requestaccessmanager *.html
+recursive-include requestaccessmanager *.ico
+recursive-include requestaccessmanager *.js
+recursive-include requestaccessmanager *.json
+recursive-include requestaccessmanager *.md
+recursive-include requestaccessmanager *.png
+recursive-include requestaccessmanager *.py
+recursive-include requestaccessmanager *.svg
+recursive-include requestaccessmanager *.txt
+recursive-exclude requestaccessmanager *.pyc
