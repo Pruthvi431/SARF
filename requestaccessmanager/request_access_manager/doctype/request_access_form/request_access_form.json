@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SARF-.####",
+ "creation": "2022-01-17 00:38:43.757689",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "employee_id",
+  "employee_name",
+  "employee_type",
+  "date_hired_terminated",
+  "column_break_5",
+  "department",
+  "department_manager_name",
+  "contract_expiry_date",
+  "section_break_7",
+  "networ_login1",
+  "email1",
+  "elog1",
+  "remote_access1",
+  "column_break_13",
+  "lims1",
+  "netsuite1",
+  "mainsaver1",
+  "wrapmation1",
+  "itrak1",
+  "traccess1",
+  "for_termination_purposes_only_section",
+  "will_you_require_access_to_the_users_email",
+  "onedrive1",
+  "section_break_24",
+  "additional_information_and_requests",
+  "amended_from",
+  "data_28"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_id.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "employee_type",
+   "fieldtype": "Select",
+   "label": "Employee Type",
+   "options": "NEW HIRE\nNEW CONTRACTOR\nCHANGE/ADDITIONS\nCONTRACT EXTENSION\n3RD PARTY CONTRACTOR\nSTUDENT HIRE\nTERMINTAION"
+  },
+  {
+   "fieldname": "date_hired_terminated",
+   "fieldtype": "Date",
+   "label": "DATE HIRED/TERMINATED",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "department.department_manager_name",
+   "fieldname": "department_manager_name",
+   "fieldtype": "Data",
+   "label": "Department Manager Name"
+  },
+  {
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Date",
+   "label": "Contract Expiry Date"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Access Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "networ_login1",
+   "fieldtype": "Check",
+   "label": "NETWORK LOGIN"
+  },
+  {
+   "default": "0",
+   "fieldname": "email1",
+   "fieldtype": "Check",
+   "label": "EMAIL"
+  },
+  {
+   "default": "0",
+   "fieldname": "elog1",
+   "fieldtype": "Check",
+   "label": "ELOG"
+  },
+  {
+   "default": "0",
+   "fieldname": "remote_access1",
+   "fieldtype": "Check",
+   "label": "REMOTE ACCESS"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "lims1",
+   "fieldtype": "Check",
+   "label": "LIMS"
+  },
+  {
+   "default": "0",
+   "fieldname": "netsuite1",
+   "fieldtype": "Check",
+   "label": "NETSUITE"
+  },
+  {
+   "default": "0",
+   "fieldname": "mainsaver1",
+   "fieldtype": "Check",
+   "label": "MAINSAVER"
+  },
+  {
+   "default": "0",
+   "fieldname": "wrapmation1",
+   "fieldtype": "Check",
+   "label": "WRAPMATION"
+  },
+  {
+   "default": "0",
+   "fieldname": "itrak1",
+   "fieldtype": "Check",
+   "label": "SMS(iTRAK)"
+  },
+  {
+   "default": "0",
+   "fieldname": "traccess1",
+   "fieldtype": "Check",
+   "label": "LMS(Traccess,DATS)"
+  },
+  {
+   "fieldname": "for_termination_purposes_only_section",
+   "fieldtype": "Section Break",
+   "label": "For Termination Purposes Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "will_you_require_access_to_the_users_email",
+   "fieldtype": "Check",
+   "label": "Will you require access to the user's email?"
+  },
+  {
+   "default": "0",
+   "fieldname": "onedrive1",
+   "fieldtype": "Check",
+   "label": "Will you require access to the User's OneDrive?"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "additional_information_and_requests",
+   "fieldtype": "Text",
+   "label": "Additional Information and Requests"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request Access Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_28",
+   "fieldtype": "Data"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-02 00:43:56.566710",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "Request Access Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name"
+}

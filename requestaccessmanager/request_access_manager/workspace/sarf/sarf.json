@@ -1,0 +1,51 @@
+{
+ "charts": [
+  {
+   "chart_name": "test"
+  }
+ ],
+ "content": "[]",
+ "creation": "2022-02-01 00:52:52.942657",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "share-people",
+ "idx": 0,
+ "label": "SARF",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Note",
+   "link_count": 0,
+   "link_to": "Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SARF",
+   "link_count": 0,
+   "link_to": "Request Access Form",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-02-01 03:16:01.869165",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "SARF",
+ "owner": "Administrator",
+ "public": 1,
+ "roles": [
+  {
+   "role": "Employee"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [],
+ "title": "SARF"
+}

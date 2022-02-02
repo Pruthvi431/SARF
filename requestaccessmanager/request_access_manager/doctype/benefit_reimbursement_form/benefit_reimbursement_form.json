@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Claim-.####",
+ "creation": "2022-01-28 02:05:37.212231",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id",
+  "employee_name",
+  "date",
+  "department",
+  "column_break_5",
+  "benefit_type",
+  "benefit_for",
+  "dependant",
+  "dependant_name",
+  "dependant_type",
+  "claim_details_section",
+  "claims",
+  "section_break_13",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee ID",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_id.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_id.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "benefit_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Benefit Type",
+   "options": "Benefit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "benefit_for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Benefit For",
+   "options": "SELF\nDEPENDANT",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.benefit_for == \"DEPENDANT\"",
+   "fieldname": "dependant",
+   "fieldtype": "Link",
+   "label": "Dependant",
+   "options": "Dependant"
+  },
+  {
+   "depends_on": "eval:doc.benefit_for == \"DEPENDANT\"",
+   "fetch_from": "dependant.dependant_name",
+   "fieldname": "dependant_name",
+   "fieldtype": "Data",
+   "label": "Dependant Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.benefit_for == \"DEPENDANT\"",
+   "fieldname": "dependant_type",
+   "fieldtype": "Select",
+   "label": "Dependant Type",
+   "options": "SPOUSE\nCHILD"
+  },
+  {
+   "fieldname": "claim_details_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Details"
+  },
+  {
+   "fieldname": "claims",
+   "fieldtype": "Table",
+   "label": "Claims",
+   "options": "Claim Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-02 00:43:55.608428",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "Benefit Reimbursement Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

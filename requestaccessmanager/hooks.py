@@ -181,4 +181,8 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"requestaccessmanager.auth.validate"
 # ]
-
+app_logo_url = "/assets/requestaccessmanager/image/anc_logo.jpg"
+website_context = {
+	"splash_image":"/assets/requestaccessmanager/image/anc_logo.jpg"
+	}
+app_include_css="assets/requestaccessmanager/css/anc_logo.css"

@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-01 04:34:53.844828",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id",
+  "dependant_name",
+  "transaction_amount",
+  "balance_after_transaction",
+  "reference_voucher_type",
+  "reference_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "dependant_name",
+   "fieldtype": "Link",
+   "label": "Dependant Name",
+   "options": "Dependant"
+  },
+  {
+   "fieldname": "transaction_amount",
+   "fieldtype": "Currency",
+   "label": "Transaction Amount"
+  },
+  {
+   "fieldname": "balance_after_transaction",
+   "fieldtype": "Currency",
+   "label": "Balance after Transaction"
+  },
+  {
+   "fieldname": "reference_voucher_type",
+   "fieldtype": "Data",
+   "label": "Reference voucher type"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-01 04:34:53.844828",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "Reimbursement Transactions",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
