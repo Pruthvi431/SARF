@@ -132,7 +132,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 03:45:12.580729",
+ "modified": "2022-02-04 06:56:01.674737",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Employee",
@@ -153,8 +153,6 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
