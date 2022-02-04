@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:department_name",
  "creation": "2022-01-18 00:45:39.002867",
@@ -9,31 +10,43 @@
  "field_order": [
   "department_name",
   "department_manager",
-  "department_manager_name"
+  "department_id",
+  "email",
+  "naming_series"
  ],
  "fields": [
   {
    "fieldname": "department_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Department Name",
    "unique": 1
   },
   {
    "fieldname": "department_manager",
-   "fieldtype": "Link",
-   "label": "Department Manager",
-   "options": "Employee"
+   "fieldtype": "Data",
+   "label": "Department Manager"
   },
   {
-   "fetch_from": "department_manager.employee_name",
-   "fieldname": "department_manager_name",
+   "fieldname": "department_id",
    "fieldtype": "Data",
-   "label": "Department manager Name"
+   "label": "Department ID"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "label": "Manager Email",
+   "options": "User"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "naming_series"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 00:43:56.128908",
+ "modified": "2022-02-03 08:25:34.605457",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Department",

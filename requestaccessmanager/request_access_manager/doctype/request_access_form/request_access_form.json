@@ -15,7 +15,7 @@
   "date_hired_terminated",
   "column_break_5",
   "department",
-  "department_manager_name",
+  "department_manager",
   "contract_expiry_date",
   "section_break_7",
   "networ_login1",
@@ -78,12 +78,6 @@
    "fieldtype": "Link",
    "label": "Department",
    "options": "Department"
-  },
-  {
-   "fetch_from": "department.department_manager_name",
-   "fieldname": "department_manager_name",
-   "fieldtype": "Data",
-   "label": "Department Manager Name"
   },
   {
    "fieldname": "contract_expiry_date",
@@ -197,11 +191,17 @@
   {
    "fieldname": "data_28",
    "fieldtype": "Data"
+  },
+  {
+   "fetch_from": "department.department_manager",
+   "fieldname": "department_manager",
+   "fieldtype": "Data",
+   "label": "Department Manager"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 00:43:56.566710",
+ "modified": "2022-02-02 07:01:57.534207",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Request Access Form",

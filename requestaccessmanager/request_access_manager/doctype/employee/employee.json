@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:position_id",
+ "creation": "2022-02-02 01:35:19.752068",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "position_id",
+  "first_name",
+  "last_name",
+  "employee_name",
+  "user",
+  "employee_type",
+  "department",
+  "column_break_4",
+  "department_manager",
+  "department_manager_email",
+  "department_id",
+  "payroll_company_id",
+  "pay_division",
+  "hire_date",
+  "birth_date",
+  "rehire_date",
+  "position_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Employee Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "employee_type",
+   "fieldtype": "Select",
+   "label": "Employee Type",
+   "options": "Permanent\nContractor"
+  },
+  {
+   "fetch_from": "department_sr.department_name",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "department.department_manager",
+   "fieldname": "department_manager",
+   "fieldtype": "Data",
+   "label": "Department Manager"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "Employee Email",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_id",
+   "fieldtype": "Data",
+   "label": "Department ID"
+  },
+  {
+   "fieldname": "payroll_company_id",
+   "fieldtype": "Data",
+   "label": "Payroll Company ID"
+  },
+  {
+   "fieldname": "position_id",
+   "fieldtype": "Data",
+   "label": "Position ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "pay_division",
+   "fieldtype": "Data",
+   "label": "Pay Division"
+  },
+  {
+   "fieldname": "department_manager_email",
+   "fieldtype": "Data",
+   "label": "Department Manager Email"
+  },
+  {
+   "fieldname": "hire_date",
+   "fieldtype": "Date",
+   "label": "Hire Date"
+  },
+  {
+   "fieldname": "rehire_date",
+   "fieldtype": "Data",
+   "label": "Rehire Date"
+  },
+  {
+   "fieldname": "position_status",
+   "fieldtype": "Select",
+   "label": "Position Status",
+   "options": "Active\nLeave"
+  },
+  {
+   "fetch_from": "user.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "user.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "birth_date",
+   "fieldtype": "Date",
+   "label": "Birth Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-03 08:27:55.277732",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "Employee",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name"
+}
