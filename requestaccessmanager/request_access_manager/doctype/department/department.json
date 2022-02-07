@@ -11,8 +11,7 @@
   "department_name",
   "department_manager",
   "department_id",
-  "email",
-  "naming_series"
+  "email"
  ],
  "fields": [
   {
@@ -37,16 +36,11 @@
    "fieldtype": "Link",
    "label": "Manager Email",
    "options": "User"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Data",
-   "label": "naming_series"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-03 08:25:34.605457",
+ "modified": "2022-02-07 02:42:03.134475",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Department",
