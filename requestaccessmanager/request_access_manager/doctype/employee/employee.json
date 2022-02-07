@@ -63,9 +63,8 @@
   },
   {
    "fieldname": "user",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Employee Email",
-   "options": "User",
    "reqd": 1
   },
   {
@@ -76,8 +75,9 @@
   },
   {
    "fieldname": "payroll_company_id",
-   "fieldtype": "Data",
-   "label": "Payroll Company ID"
+   "fieldtype": "Select",
+   "label": "Payroll Company ID",
+   "options": "N1SF\nN1SG\nN1SH"
   },
   {
    "fieldname": "position_id",
@@ -116,13 +116,15 @@
    "fetch_from": "user.first_name",
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "label": "First Name",
+   "reqd": 1
   },
   {
    "fetch_from": "user.last_name",
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "reqd": 1
   },
   {
    "fieldname": "birth_date",
@@ -132,7 +134,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 06:56:01.674737",
+ "modified": "2022-02-07 05:21:29.325067",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Employee",
