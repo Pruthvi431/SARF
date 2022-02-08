@@ -63,8 +63,9 @@
   },
   {
    "fieldname": "user",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Employee Email",
+   "options": "User",
    "reqd": 1
   },
   {
@@ -134,7 +135,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-07 05:21:29.325067",
+ "modified": "2022-02-08 01:16:29.214553",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Employee",
