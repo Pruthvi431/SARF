@@ -1,32 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2022-01-28 06:38:55.965762",
+ "creation": "2022-02-10 06:36:36.279660",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "company_name",
-  "location"
+  "dsadsa"
  ],
  "fields": [
   {
-   "fieldname": "company_name",
+   "fieldname": "dsadsa",
    "fieldtype": "Data",
-   "label": "Company Name"
-  },
-  {
-   "fieldname": "location",
-   "fieldtype": "Data",
-   "label": "Location"
+   "label": "dsadsa"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 00:43:54.762380",
+ "modified": "2022-02-10 06:36:36.279660",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
- "name": "Company",
+ "name": "sdasdsa",
  "owner": "Administrator",
  "permissions": [
   {

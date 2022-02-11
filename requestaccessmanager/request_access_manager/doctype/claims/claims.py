@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class ClaimDetails(Document):
+class Claims(Document):
 	pass

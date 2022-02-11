@@ -10,7 +10,11 @@
   "description",
   "amount",
   "receipt",
-  "date"
+  "claim_amount",
+  "date",
+  "benefit",
+  "maximum_amount",
+  "benefit_name"
  ],
  "fields": [
   {
@@ -45,15 +49,42 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date"
+  },
+  {
+   "fieldname": "benefit_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Benefit Name"
+  },
+  {
+   "fetch_from": "benefit_name.maximum_benefit_amount",
+   "fieldname": "maximum_amount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Maximum Amount"
+  },
+  {
+   "fieldname": "benefit",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Benefit",
+   "options": "Benefits"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Claim Amount",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-02-02 00:43:54.389138",
+ "modified": "2022-02-10 04:24:10.619109",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
- "name": "Claim Details",
+ "name": "Claims",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

@@ -42,7 +42,7 @@
    "fieldname": "employee_type",
    "fieldtype": "Select",
    "label": "Employee Type",
-   "options": "Permanent\nContractor"
+   "options": "Permanent\nTransloading\nContractor"
   },
   {
    "fetch_from": "department_sr.department_name",
@@ -135,7 +135,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-08 01:16:29.214553",
+ "modified": "2022-02-09 08:20:06.290670",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Employee",

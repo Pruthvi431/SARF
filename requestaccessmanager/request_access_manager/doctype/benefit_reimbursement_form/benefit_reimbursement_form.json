@@ -2,17 +2,22 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "Claim-.####",
- "creation": "2022-01-28 02:05:37.212231",
+ "creation": "2022-02-10 06:14:06.623118",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "employee_id",
   "employee_name",
+  "date_of_hire",
   "date",
   "department",
   "column_break_5",
   "benefit_type",
+  "remaining_amount",
+  "maximum_amount",
+  "maximum_amount_per_person_per_2_years",
+  "is_taxable",
   "benefit_for",
   "dependant",
   "dependant_name",
@@ -20,7 +25,8 @@
   "claim_details_section",
   "claims",
   "section_break_13",
-  "total_amount"
+  "total_amount",
+  "sectioned_amount"
  ],
  "fields": [
   {
@@ -37,6 +43,13 @@
    "fieldtype": "Data",
    "label": "Employee Name",
    "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.hire_date",
+   "fieldname": "date_of_hire",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Date of Hire"
   },
   {
    "fieldname": "date",
@@ -62,8 +75,37 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Benefit Type",
-   "options": "Benefit Type",
+   "options": "Benefits",
    "reqd": 1
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.benefit_type == \"FITNESS/HEALTH/EDUCATION ALLOWANCE\" || doc.benefit_type == \"FITNESS/HEALTH/EDUCATION ALLOWANCE - Transloading\" || doc.benefit_type == \"Smoking Cessation\" || doc.benefit_type == \"Smoking Cessation - Transloading\"",
+   "fetch_from": "benefit_type.maximum_benefit_amount",
+   "fieldname": "maximum_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Amount Per Person",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.benefit_type == \"Vision - Transloading\" || doc.benefit_type == \"Vision\"",
+   "fetch_from": "benefit_type.maximum_benefit_amount",
+   "fieldname": "maximum_amount_per_person_per_2_years",
+   "fieldtype": "Currency",
+   "label": "MAximum Amount Per Person Per 2 Years",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.benefit_type == \"FITNESS/HEALTH/EDUCATION ALLOWANCE\" || doc.benefit_type == \"FITNESS/HEALTH/EDUCATION ALLOWANCE - Transloading\"",
+   "fieldname": "is_taxable",
+   "fieldtype": "Check",
+   "label": "Is Taxable?"
   },
   {
    "fieldname": "benefit_for",
@@ -104,7 +146,7 @@
    "fieldname": "claims",
    "fieldtype": "Table",
    "label": "Claims",
-   "options": "Claim Details",
+   "options": "Claims",
    "reqd": 1
   },
   {
@@ -116,11 +158,16 @@
    "fieldtype": "Currency",
    "label": "Total Amount",
    "read_only": 1
+  },
+  {
+   "fieldname": "sectioned_amount",
+   "fieldtype": "Currency",
+   "label": "Sanctioned Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-02 00:43:55.608428",
+ "modified": "2022-02-10 06:14:06.623118",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Benefit Reimbursement Form",

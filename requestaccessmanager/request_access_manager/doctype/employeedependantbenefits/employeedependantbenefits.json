@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "EDB-.####",
+ "creation": "2022-02-08 06:29:10.003592",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "benefit_for",
+  "employee_id",
+  "dependent_id",
+  "benefit_id",
+  "benefit_name",
+  "benefit_amount",
+  "remainingamount",
+  "reserved_amount",
+  "availmentcount",
+  "sanctioned_amount1"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.benefit_for == \"Employee\"",
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "benefit_id",
+   "fieldtype": "Link",
+   "label": "Benefit ID",
+   "options": "Benefits"
+  },
+  {
+   "fetch_from": "benefit_id.benefit_type",
+   "fieldname": "benefit_name",
+   "fieldtype": "Data",
+   "label": "Benefit Name"
+  },
+  {
+   "fetch_from": "benefit_id.maximum_benefit_amount",
+   "fetch_if_empty": 1,
+   "fieldname": "benefit_amount",
+   "fieldtype": "Currency",
+   "label": "Benefit Amount"
+  },
+  {
+   "depends_on": "eval:doc.benefit_for == \"Dependent\"",
+   "fieldname": "dependent_id",
+   "fieldtype": "Link",
+   "label": "Dependent ID",
+   "options": "Dependant"
+  },
+  {
+   "fieldname": "remainingamount",
+   "fieldtype": "Currency",
+   "label": "RemainingAmount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.benefit_name == \"SAFETY SHOES\"",
+   "fieldname": "availmentcount",
+   "fieldtype": "Int",
+   "label": "AvailmentCount"
+  },
+  {
+   "fieldname": "benefit_for",
+   "fieldtype": "Select",
+   "label": "Benefit For",
+   "options": "Employee\nDependent"
+  },
+  {
+   "fieldname": "sanctioned_amount1",
+   "fieldtype": "Int",
+   "label": "Sanctioned Amount"
+  },
+  {
+   "fieldname": "reserved_amount",
+   "fieldtype": "Currency",
+   "label": "Reserved Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-11 00:44:39.249344",
+ "modified_by": "Administrator",
+ "module": "Request Access Manager",
+ "name": "EmployeeDependantBenefits",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

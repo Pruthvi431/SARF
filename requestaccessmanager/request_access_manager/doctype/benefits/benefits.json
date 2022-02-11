@@ -8,15 +8,18 @@
  "engine": "InnoDB",
  "field_order": [
   "benefit_type",
-  "description",
   "maximum_benefit_amount",
-  "is_taxable"
+  "benefit_duration",
+  "requires_general_manager_signature1",
+  "is_prorated",
+  "description",
+  "number_of_pairs_allowed"
  ],
  "fields": [
   {
    "fieldname": "benefit_type",
    "fieldtype": "Data",
-   "label": "Benefit Type",
+   "label": "Benefit Name",
    "unique": 1
   },
   {
@@ -30,18 +33,39 @@
    "label": "Maximum Benefit Amount"
   },
   {
+   "fieldname": "benefit_duration",
+   "fieldtype": "Duration",
+   "label": "Benefit Duration"
+  },
+  {
    "default": "0",
-   "fieldname": "is_taxable",
+   "fieldname": "is_prorated",
    "fieldtype": "Check",
-   "label": "Is Taxable"
+   "label": "Is_prorated"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_general_manager_signature1",
+   "fieldtype": "Check",
+   "label": "Requires General Manager Signature"
+  },
+  {
+   "fieldname": "number_of_pairs_allowed",
+   "fieldtype": "Data",
+   "label": "Number of Pairs Allowed"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2022-02-02 00:43:55.288742",
+ "links": [
+  {
+   "link_doctype": "Benefit Reimbursement Form",
+   "link_fieldname": "benefit_type"
+  }
+ ],
+ "modified": "2022-02-09 08:33:46.017821",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
- "name": "Benefit Type",
+ "name": "Benefits",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -56,8 +80,19 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

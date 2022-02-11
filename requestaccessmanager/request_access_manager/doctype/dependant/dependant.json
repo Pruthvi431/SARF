@@ -8,8 +8,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "dependant_first_name",
+  "dependant_last_name",
   "dependant_name",
   "employee",
+  "employee_email",
   "employee_name",
   "relation",
   "date_of_birth",
@@ -19,8 +22,12 @@
   {
    "fieldname": "dependant_name",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Dependant Name"
+   "in_preview": 1,
+   "label": "Dependant Full Name",
+   "read_only": 1
   },
   {
    "fieldname": "employee",
@@ -51,11 +58,27 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name"
+  },
+  {
+   "fieldname": "dependant_first_name",
+   "fieldtype": "Data",
+   "label": "Dependant First Name"
+  },
+  {
+   "fieldname": "dependant_last_name",
+   "fieldtype": "Data",
+   "label": "Dependant Last Name"
+  },
+  {
+   "fetch_from": "employee.user",
+   "fieldname": "employee_email",
+   "fieldtype": "Data",
+   "label": "Employee Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-04 04:13:08.420934",
+ "modified": "2022-02-10 01:50:17.828943",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Dependant",
@@ -73,8 +96,31 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Payroll Administrator",
+   "share": 1,
+   "write": 1
   }
  ],
+ "search_fields": "dependant_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

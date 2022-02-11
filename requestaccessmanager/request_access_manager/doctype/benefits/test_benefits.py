@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestCompany(unittest.TestCase):
+class TestBenefits(unittest.TestCase):
 	pass

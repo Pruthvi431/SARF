@@ -45,12 +45,12 @@
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
-   "label": "Amount"
+   "label": "Available Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-01 04:29:28.582952",
+ "modified": "2022-02-09 04:38:46.768562",
  "modified_by": "Administrator",
  "module": "Request Access Manager",
  "name": "Employee Reimbursement Balance",
